@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.momentcrm.com/embed"></script>
+    <script>
+      MomentCRM('init', {
+        'teamVanityId': 'moment',
+        'doChat': true,
+        'doTimeTravel': true,
+        'quadClickForFeedback': true,
+      });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suggest.dev - Ultra-low-friction feedback for your website</title>
+    <meta name="description" content="Let customers and teammates give crucial feedback right when they encounter a problem.">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="suggest_dev_logo.png" alt="suggest.dev logo" width="218">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/docs">Docs</a></li>
+                    <li><a href="#pricing" onclick="event.preventDefault(); document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })">Pricing</a></li>
+                    <li><a href="/login">Log in</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section section-white">
+            <div class="container">
+                <h1>Ultra-low-friction feedback for your website</h1>
+                
+                <p class="subtitle">Let customers and teammates give crucial feedback right when they encounter a problem.</p>
+                
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">Get started</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('instructions').scrollIntoView({ behavior: 'smooth' })">Learn more</button>
+                </div>
+                
+                <div class="hero-image">
+                    <video src="herodemo/hero.mp4" autoplay loop muted playsinline>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-grey" id="instructions">
+            <div class="container">
+                <div class="instructions-layout">
+                    <div>
+                        <h2>Instructions for users</h2>
+                        <ol>
+                            <li>Rageclick (a.k.a. quadruple click) anywhere</li>
+                            <li>Type in the box that shows up</li>
+                        </ol>
+                    </div>
+                    <div class="phone-frame">
+                        <div class="phone-power-button"></div>
+                        <div class="phone-screen">
+                            <video src="userdemo/userdemo.mp4" autoplay loop muted playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-white">
+            <div class="container">
+                <div class="builders-layout">
+                    <div>
+                        <h2>Instructions for builders</h2>
+                        <ol>
+                            <li>Open your feedback inbox</li>
+                            <li>Click play to see a video of what happened</li>
+                        </ol>
+                    </div>
+                    <div class="tablet-frame">
+                        <div class="laptop-screen">
+                            <div class="tablet-screen">
+                                <video src="builderdemo/builderdemo.mp4" autoplay loop muted playsinline>
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="laptop-base"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-grey">
+            <div class="container">
+                <h2>Amazing for founders and product owners</h2>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/0eGVZLuJ20w?rel=0" 
+                        title="Why Your Best Bugs Never Get Reported"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-white">
+            <div class="container">
+                <h2>Other goodies</h2>
+                <div class="goodies-grid">
+                    <div class="goodie-item">
+                        <img src="installation.svg" alt="30-second installation icon" class="goodie-icon">
+                        <h3>30-second installation</h3>
+                        <div class="tooltip">Add to your site by copy pasting a short snippet</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="api.svg" alt="Full API control icon" class="goodie-icon">
+                        <h3>Full API control</h3>
+                        <div class="tooltip">Programmatically manage feedback and integrate with your workflow</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="error.svg" alt="Error stack traces icon" class="goodie-icon">
+                        <h3>Error stack traces</h3>
+                        <div class="tooltip">Automatically capture JavaScript errors with full stack traces</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="browser.svg" alt="Browser info icon" class="goodie-icon">
+                        <h3>Browser info</h3>
+                        <div class="tooltip">Automatically captures browser, OS, and device details</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="team.svg" alt="Team collaboration icon" class="goodie-icon">
+                        <h3>Team collaboration</h3>
+                        <div class="tooltip">Share feedback with your team and assign to the right people</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="respond.svg" alt="Respond to customers icon" class="goodie-icon">
+                        <h3>Respond to customers</h3>
+                        <div class="tooltip">Reply directly to users who submitted feedback</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="notes.svg" alt="Internal notes icon" class="goodie-icon">
+                        <h3>Internal notes</h3>
+                        <div class="tooltip">Private team comments on feedback items</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="notifications.svg" alt="Notifications icon" class="goodie-icon">
+                        <h3>Notifications</h3>
+                        <div class="tooltip">Get instant alerts when new feedback arrives</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="app.svg" alt="Mobile app icon" class="goodie-icon">
+                        <h3>Mobile app</h3>
+                        <div class="tooltip">Review and respond to feedback on the go</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="integration.svg" alt="Integrations icon" class="goodie-icon">
+                        <h3>Integrations</h3>
+                        <div class="tooltip">Easily connect with Slack, Stripe, and more</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="privacy.svg" alt="Privacy controls icon" class="goodie-icon">
+                        <h3>Privacy controls</h3>
+                        <div class="tooltip">Full data control and anonymization options</div>
+                    </div>
+                    <div class="goodie-item">
+                        <img src="metadata.svg" alt="Custom metadata icon" class="goodie-icon">
+                        <h3>Custom metadata</h3>
+                        <div class="tooltip">Add your own custom fields and events to capture context-specific information</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-grey" id="pricing">
+            <div class="container">
+                <h2>Pricing</h2>
+                <p class="pricing-intro">Developers are expensive.<br>Stop making them chase down poorly written bug reports.<br>Earn back the cost in developer time after a single bugfix.</p>
+                <div class="pricing-card">
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 10 team members</li>
+                        <li>Up to 1000 minutes of perma-saved feedback video</li>
+                    </ul>
+                    <button class="btn btn-primary">Get started</button>
+                </div>
+                <p class="pricing-guarantee">If you are unhappy with our product for any reason, we will refund you in full, no questions asked.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Restart videos when they come into view
+        const videos = document.querySelectorAll('video');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // Trigger when 50% of video is visible
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.currentTime = 0; // Reset to beginning
+                    video.play();
+                }
+            });
+        }, observerOptions);
+        
+        videos.forEach(video => {
+            observer.observe(video);
+        });
+    </script>
+</body>
+</html>

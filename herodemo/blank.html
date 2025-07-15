@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Click Indicator</title>
+    <script src="https://www.momentcrm.com/embed"></script>
+    <script>
+      MomentCRM('init', {
+        'teamVanityId': 'moment',
+        'doChat': true,
+        'doTimeTravel': true,
+        'quadClickForFeedback': true,
+      });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+
+        .click-indicator {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #007bff;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            animation: pulse 0.3s ease-out;
+            z-index: 9999;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .edit-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .edit-button:hover {
+            background: #218838;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-wrapper">
+            <img src="profile.png" alt="Profile Picture" class="profile-picture">
+            <button class="edit-button">Edit</button>
+        </div>
+    </div>
+    
+    <script>
+        let indicator = null;
+
+        document.addEventListener('mousedown', (e) => {
+            // Remove any existing indicator
+            if (indicator) {
+                indicator.remove();
+            }
+
+            // Create new indicator
+            indicator = document.createElement('div');
+            indicator.className = 'click-indicator';
+            indicator.style.left = e.clientX + 'px';
+            indicator.style.top = e.clientY + 'px';
+            
+            document.body.appendChild(indicator);
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (indicator) {
+                indicator.remove();
+                indicator = null;
+            }
+        });
+
+        // Also handle mouse leave to clean up
+        document.addEventListener('mouseleave', () => {
+            if (indicator) {
+                indicator.remove();
+                indicator = null;
+            }
+        });
+    </script>
+</body>
+</html>
