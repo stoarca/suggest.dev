@@ -42,7 +42,7 @@
                 <p class="subtitle">Let customers and teammates give crucial feedback right when they encounter a problem.</p>
                 
                 <div class="cta-buttons">
-                    <button class="btn btn-primary">Get started</button>
+                    <button class="btn btn-primary" onclick="handleGetStarted()">Get started</button>
                     <button class="btn btn-secondary" onclick="document.getElementById('instructions').scrollIntoView({ behavior: 'smooth' })">Learn more</button>
                 </div>
                 
@@ -194,7 +194,7 @@
                             <span class="amount">99</span>
                             <span class="period">/month</span>
                         </div>
-                        <button class="btn btn-primary">Get started</button>
+                        <button class="btn btn-primary" onclick="handleGetStarted()">Get started</button>
                     </div>
                     <ul class="pricing-features">
                         <li>Up to 10 team members</li>
@@ -228,6 +228,12 @@
         videos.forEach(video => {
             observer.observe(video);
         });
+        
+        function handleGetStarted() {
+            const paymentLink = 'https://buy.stripe.com/test_28EbIUf0H95D1V73Km7ss00';
+            //const paymentLink = 'https://buy.stripe.com/28EbIUf0H95D1V73Km7ss00';
+            window.location.href = paymentLink;
+        }
     </script>
 </body>
 </html>
