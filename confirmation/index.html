@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you - suggest.dev</title>
+    <meta name="description" content="Thank you for signing up for suggest.dev">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Override section height to prevent scrollbar */
+        .section {
+            min-height: calc(100vh - 80px);
+        }
+        
+        .confirmation-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .confirmation-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .confirmation-container p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .confirmation-container h1 {
+                font-size: 2rem;
+            }
+            
+            .confirmation-container p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../suggest_dev_logo.png" alt="suggest.dev logo" width="218">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section section-white">
+            <div class="container">
+                <div class="confirmation-container">
+                    <h1>Thank you!</h1>
+                    <p>Your payment information has been added successfully.</p>
+                    <p>Now let's set up your team on <img src="../momentLogoBlue.svg" alt="Moment" style="height: 1.2em; vertical-align: middle; margin: -9px 0.2em 0 0.2em;">.</p>
+                    <button class="btn btn-primary" onclick="continueToSignup()">Continue to team setup</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        function continueToSignup() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const stripeCheckoutId = urlParams.get('stripeCheckoutId');
+            
+            // Check if stripeCheckoutId exists
+            if (!stripeCheckoutId) {
+                alert('Error: Missing payment information. Please complete the payment process.');
+                return;
+            }
+            
+            // Redirect to Moment signup with the Stripe checkout ID
+            window.location.href = `https://wwwtest.momentcrm.com/signup/createteam?stripeCheckoutId=${stripeCheckoutId}`;
+        }
+    </script>
+</body>
+</html>
