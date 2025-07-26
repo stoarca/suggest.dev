@@ -145,7 +145,8 @@ h2 {
 }
 
 .hero-image video {
-    max-width: 700px;
+    width: 700px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -349,6 +350,7 @@ h2 {
     width: 1000px;
     max-width: 100%;
     position: relative;
+    padding: 0 5%;
 }
 
 .laptop-screen {
