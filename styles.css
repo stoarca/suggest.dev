@@ -552,6 +552,24 @@ h2 {
     }
 }
 
+.goodies-more {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.goodies-more a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.goodies-more a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
 
 .pricing-intro {
     font-size: 1.125rem;
