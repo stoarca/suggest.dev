@@ -26,9 +26,9 @@
                     <img src="suggest_dev_logo.png" alt="suggest.dev logo" width="218">
                 </div>
                 <ul class="nav-links">
-                    <li><a href="/docs">Docs</a></li>
+                    <li><a href="https://moment.help.guide/v1/user-manual/time-travel/user-feedback">Docs</a></li>
                     <li><a href="#pricing" onclick="event.preventDefault(); document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })">Pricing</a></li>
-                    <li><a href="/login">Log in</a></li>
+                    <li><a href="https://www.momentcrm.com/signin">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -96,7 +96,8 @@
         
         <section class="section section-grey">
             <div class="container">
-                <h2>Amazing for product owners</h2>
+                <h2>QA without the QA team</h2>
+                <p class="subtitle">Your sales, marketing, and support employees run into bugs every day.<br/>Make it easy for them to improve your software.</p>
                 <div class="video-container">
                     <iframe 
                         src="https://www.youtube.com/embed/0eGVZLuJ20w?rel=0" 
@@ -189,15 +190,20 @@
                             <span class="period">/month</span>
                         </div>
                         <div>
-                            <button class="btn btn-primary" onclick="handleGetStarted()">Start 7-day free trial</button>
+                            <button class="btn btn-primary" onclick="handleGetStarted()">Start for free</button>
                         </div>
                     </div>
                     <ul class="pricing-features">
                         <li>Up to 10 team members</li>
-                        <li>Up to 1000 minutes of perma-saved feedback video</li>
+                        <li>Unlimited feedback with 1-month video retention</li>
+                        <li>Up to 1000 minutes of feedback video saved forever</li>
+
                     </ul>
                 </div>
-                <p class="pricing-guarantee">If you are unhappy with our product for any reason, we will refund you in full, no questions asked.</p>
+                <p class="pricing-guarantee">
+                Unlimited free trial has 3-day video retention and cannot save forever.<br/>
+                If you are unhappy with our product for any reason, we will refund you in full, no questions asked.
+                </p>
             </div>
         </section>
     </main>
@@ -226,9 +232,7 @@
         });
         
         function handleGetStarted() {
-            const paymentLink = 'https://buy.stripe.com/test_28EbIUf0H95D1V73Km7ss00';
-            //const paymentLink = 'https://buy.stripe.com/28EbIUf0H95D1V73Km7ss00';
-            window.location.href = paymentLink;
+            window.location.href = 'https://www.momentcrm.com/signup/createteam';
         }
     </script>
 </body>
