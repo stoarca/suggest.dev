@@ -190,7 +190,8 @@
                             <span class="period">/month</span>
                         </div>
                         <div>
-                            <button class="btn btn-primary" onclick="handleGetStarted()">Start for free</button>
+                            <button class="btn btn-primary" onclick="window.location.href='https://buy.stripe.com/test_28EbIUf0H95D1V73Km7ss00'">Take my money now</button>
+                            <p class="trial-link">or <a href="https://www.momentcrm.com/signup/createteam?next=/settings/installation">start free trial</a></p>
                         </div>
                     </div>
                     <ul class="pricing-features">
@@ -226,11 +227,11 @@
                 </div>
                 <div class="footer-section">
                     <h3>About</h3>
-                    <p>suggest.dev is built by the team at <a href="https://www.momentcrm.com" target="_blank">Moment</a></p>
+                    <p>suggest.dev is part of the <a href="https://www.momentcrm.com" target="_blank">Moment</a> platform.</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Debuggex Inc. All rights reserved.</p>
+                <p>&copy; <span id="current-year"></span> Debuggex Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -259,9 +260,8 @@
             observer.observe(video);
         });
         
-        function handleGetStarted() {
-            window.location.href = 'https://www.momentcrm.com/signup/createteam';
-        }
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

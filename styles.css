@@ -663,6 +663,23 @@ h2 {
     white-space: nowrap;
 }
 
+.trial-link {
+    margin-top: 5px;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.trial-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.trial-link a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
 .pricing-guarantee {
     font-size: 0.875rem;
     color: var(--text-light);
