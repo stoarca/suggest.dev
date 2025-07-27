@@ -662,6 +662,7 @@ h2 {
 }
 
 
+
 .pricing-card .btn {
     padding: 0.75rem 2rem;
     font-size: 1rem;
@@ -691,6 +692,17 @@ h2 {
     margin-top: 4rem;
     text-align: center;
     font-style: normal;
+}
+
+.pricing-guarantee a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.pricing-guarantee a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
