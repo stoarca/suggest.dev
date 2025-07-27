@@ -137,6 +137,11 @@ h2 {
     margin-bottom: 3rem;
 }
 
+.subtitle strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
 .cta-buttons {
     display: flex;
     gap: 1rem;
