@@ -200,7 +200,7 @@ h2 {
     justify-content: center;
     gap: 4rem;
     row-gap: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 

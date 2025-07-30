@@ -38,29 +38,10 @@
     <main>
         <section class="section section-white">
             <div class="container">
-                <h1>Ultra-low-friction feedback for your website</h1>
-                
-                <p class="subtitle">Let customers and teammates give crucial feedback right when they encounter a problem.</p>
-                
-                <div class="cta-buttons">
-                    <button class="btn btn-primary" onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })">Get started</button>
-                    <button class="btn btn-secondary" onclick="document.getElementById('instructions').scrollIntoView({ behavior: 'smooth' })">Learn more</button>
-                </div>
-                
-                <div class="hero-image">
-                    <video src="herodemo/hero.mp4" autoplay loop muted playsinline disablePictureInPicture>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section section-grey" id="instructions">
-            <div class="container">
                 <div class="instructions-layout">
                     <div>
-                        <h2>Feedback when it matters</h2>
-                        <p class="subtitle">Your users naturally rageclick when frustrated.<br>Request feedback on a dead quadruple-click or set up a custom trigger.</p>
+                        <h2>Impeccable bug reports<br/>in 6 seconds</h2>
+                        <p class="subtitle">Let your team give feedback on your website right when they encounter a problem.</p>
                     </div>
                     <div class="phone-frame">
                         <div class="phone-power-button"></div>
@@ -74,19 +55,19 @@
             </div>
         </section>
         
-        <section class="section section-white">
+        <section class="section section-grey">
             <div class="container">
                 <h2>Try rageclicking now</h2>
-                <p class="subtitle">Click (or tap) 4 times quickly anywhere on this landing page.</p>
+                <p class="subtitle">Click (or tap) 4 times quickly anywhere on this landing page.<br/>You can also set up a custom trigger.</p>
             </div>
         </section>
         
-        <section class="section section-grey">
+        <section class="section section-white">
             <div class="container">
                 <div class="builders-layout">
                     <div>
                         <h2>Rewind time to watch the video</h2>
-                        <p class="subtitle">Open your feedback inbox and click play.<br>See exactly what your user saw, with full context.</p>
+                        <p class="subtitle">Open your feedback inbox and click play.<br>See exactly what the user saw, with full context.</p>
                     </div>
                     <div class="tablet-frame">
                         <div class="laptop-screen">
@@ -102,7 +83,7 @@
             </div>
         </section>
         
-        <section class="section section-white">
+        <section class="section section-grey">
             <div class="container">
                 <h2>QA without the QA team</h2>
                 <p class="subtitle">Your sales, marketing, and support staff encounter bugs every day.<br/>Make it easy for them to improve your software.</p>
@@ -114,6 +95,18 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
                     </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section-white">
+            <div class="container">
+                <h2>Enable users to give feedback as well</h2>
+                <p class="subtitle">Some of your website users naturally rageclick when frustrated.<br/>Let them contribute as well. (Optional)</p>
+                <div class="hero-image">
+                    <video src="herodemo/hero.mp4" autoplay loop muted playsinline disablePictureInPicture>
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>
@@ -199,19 +192,19 @@
                             <span class="period">/month</span>
                         </div>
                         <div>
-                            <button class="btn btn-primary" id="payment-button">Take my money now</button>
-                            <p class="trial-link">or <a href="#" id="trial-link">start free trial</a></p>
+                            <button class="btn btn-primary" id="payment-button">Start for free</button>
+                            <p class="trial-link">you can upgrade later</p>
                         </div>
                     </div>
                     <ul class="pricing-features">
                         <li>Up to 10 team members</li>
                         <li>Unlimited feedback with 1-month video retention</li>
-                        <li>Up to 1000 minutes of feedback video saved forever</li>
+                        <li>Up to 200 minutes/month of feedback video saved forever</li>
                     </ul>
                 </div>
                 <p class="pricing-guarantee">
                 Need higher limits? <a href="#" onclick="event.preventDefault(); MomentCRM('open')">Contact sales</a><br/>
-                Unlimited free trial has 20 minutes saved forever, and 3-day video retention after that.<br/>
+                Unlimited free trial has 5 minutes/month saved forever, and 5-day video retention after that.<br/>
                 If you are unhappy with our product for any reason, we will refund you in full, no questions asked.
                 </p>
             </div>
@@ -278,18 +271,15 @@
         const isTest = urlParams.get('test') === '1';
         
         const paymentButton = document.getElementById('payment-button');
-        const trialLink = document.getElementById('trial-link');
         
         if (isTest) {
             paymentButton.onclick = function() {
-                window.location.href = 'https://buy.stripe.com/test_28EbIUf0H95D1V73Km7ss00';
+                window.location.href = './confirmation/?trial=1&test=1';
             };
-            trialLink.href = '/confirmation/?trial=1&test=1';
         } else {
             paymentButton.onclick = function() {
-                window.location.href = 'https://buy.stripe.com/28EbIUf0H95D1V73Km7ss00';
+                window.location.href = './confirmation/?trial=1';
             };
-            trialLink.href = '/confirmation/?trial=1';
         }
     </script>
 </body>
