@@ -585,40 +585,66 @@ h2 {
     display: none;
 }
 
-.pricing-card {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    max-width: 900px;
-    margin: 0 auto;
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 400px));
+    gap: 2rem;
     justify-content: center;
-    position: relative;
+    margin: 0 auto 3rem;
 }
 
-.pricing-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+.pricing-column {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 2.5rem;
     position: relative;
-    flex-shrink: 0;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.pricing-left::after {
-    content: '';
-    position: absolute;
-    right: -2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 80px;
-    width: 1px;
-    background-color: #e5e5e5;
+.pricing-column:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pricing-header h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pricing-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(77, 121, 206, 0.3);
 }
 
 .price {
     display: flex;
     align-items: baseline;
     gap: 0.25rem;
+    justify-content: center;
 }
 
 .currency {
@@ -647,7 +673,6 @@ h2 {
     list-style: none;
     padding: 0;
     margin: 0;
-    min-width: 350px;
 }
 
 .pricing-features li {
@@ -723,6 +748,18 @@ h2 {
     text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+    .pricing-table {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 500px;
+    }
+    
+    .pricing-features li {
+        white-space: normal;
+    }
+}
+
 @media (max-width: 768px) {
     .pricing-intro {
         font-size: 0.8125rem;
@@ -733,22 +770,12 @@ h2 {
         display: block;
     }
     
-    .pricing-card {
-        flex-direction: column;
-        gap: 3rem;
-        align-items: center;
-    }
-    
-    .pricing-left {
-        width: 100%;
-    }
-    
-    .pricing-left::after {
-        display: none;
+    .pricing-column {
+        padding: 2rem;
     }
     
     .amount {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .pricing-features {
@@ -758,13 +785,7 @@ h2 {
     
     .pricing-features li {
         font-size: 1rem;
-        white-space: normal;
     }
-    
-    .pricing-card .btn {
-        width: auto;
-    }
-    
     
     .pricing-guarantee {
         font-size: 0.8125rem;
