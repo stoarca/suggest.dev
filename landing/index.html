@@ -86,7 +86,7 @@
         <section class="section section-grey">
             <div class="container">
                 <h2>QA without the QA team</h2>
-                <p class="subtitle">Your sales, marketing, and support staff encounter bugs every day.<br/>Make it easy for them to improve your software.</p>
+                <p class="subtitle">Your sales, marketing, and support staff encounter bugs in your product.<br/>Make it easy for them to improve your software.</p>
                 <div class="video-container">
                     <iframe 
                         src="https://www.youtube.com/embed/0eGVZLuJ20w?rel=0" 
@@ -163,7 +163,7 @@
                     <div class="goodie-item">
                         <img src="integration.svg" alt="Integrations icon" class="goodie-icon">
                         <h3>Integrations</h3>
-                        <div class="tooltip">Easily connect with Slack, Stripe, and more</div>
+                        <div class="tooltip">Easily connect with Zapier, Slack, and more</div>
                     </div>
                     <div class="goodie-item">
                         <img src="privacy.svg" alt="Privacy controls icon" class="goodie-icon">
@@ -183,7 +183,7 @@
         <section class="section section-white" id="pricing">
             <div class="container">
                 <h2>Pricing</h2>
-                <p class="pricing-intro">Developers are expensive.<br class="mobile-break"> Stop making them chase down poorly written bug reports.<br>Earn back the cost in developer time after a single bugfix.</p>
+                <p class="pricing-intro">Developers are expensive.<br>Stop making them chase down poorly written bug reports.</p>
                 <div class="pricing-table">
                     <div class="pricing-column">
                         <div class="pricing-header">
@@ -197,10 +197,10 @@
                         <ul class="pricing-features">
                             <li>Up to 2 team members</li>
                             <li>20k sessions with 5-day retention</li>
-                            <li>10 reports saved forever</li>
+                            <li>10 sessions saved forever</li>
                         </ul>
                         <div class="pricing-cta">
-                            <button class="btn btn-primary" id="free-button">Start for free</button>
+                            <button class="btn btn-primary" id="free-button">Create free account</button>
                             <p class="trial-link">easily upgrade later</p>
                         </div>
                     </div>
@@ -216,10 +216,10 @@
                         <ul class="pricing-features">
                             <li>Up to 10 team members</li>
                             <li>20k sessions with 1-month retention</li>
-                            <li>1000 reports saved forever</li>
+                            <li>1000 sessions saved forever</li>
                         </ul>
                         <div class="pricing-cta">
-                            <button class="btn btn-primary" id="payment-button">Upgrade now</button>
+                            <button class="btn btn-primary" id="payment-button">Subscribe now</button>
                         </div>
                     </div>
                 </div>
@@ -295,14 +295,14 @@
         
         if (isTest) {
             paymentButton.onclick = function() {
-                window.location.href = './confirmation/?trial=1&test=1';
+                window.location.href = 'https://buy.stripe.com/test_28EbIUf0H95D1V73Km7ss00';
             };
             freeButton.onclick = function() {
                 window.location.href = './confirmation/?trial=1&test=1';
             };
         } else {
             paymentButton.onclick = function() {
-                window.location.href = './confirmation/?trial=1';
+                window.location.href = 'https://buy.stripe.com/28EbIUf0H95D1V73Km7ss00';
             };
             freeButton.onclick = function() {
                 window.location.href = './confirmation/?trial=1';
