@@ -87,14 +87,16 @@
             <div class="container">
                 <h2>QA without the QA team</h2>
                 <p class="subtitle">Your sales, marketing, and support staff encounter bugs in your product.<br/>Make it easy for them to improve your software.</p>
-                <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/0eGVZLuJ20w?rel=0" 
-                        title="Why Your Best Bugs Never Get Reported"
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+                <div class="video-container" id="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <button class="video-play-button" onclick="loadYouTubeVideo()">
+                            <svg class="play-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="40" fill="rgb(0, 103, 251)"/>
+                                <path d="M32 25 L32 55 L52 40 Z" fill="white"/>
+                            </svg>
+                            <span class="play-text">Watch full demo (3 minutes)</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -102,7 +104,7 @@
         <section class="section section-white">
             <div class="container">
                 <h2>Enable users to give feedback as well</h2>
-                <p class="subtitle">Some of your website users naturally rageclick when frustrated.<br/>Let them contribute. (Optional)</p>
+                <p class="subtitle">Some of your website users naturally rageclick when frustrated.<br/>Let them contribute too. (Optional)</p>
                 <div class="hero-image">
                     <video src="herodemo/hero.mp4" autoplay loop muted playsinline disablePictureInPicture>
                         Your browser does not support the video tag.
@@ -206,7 +208,7 @@
                     </div>
                     <div class="pricing-column">
                         <div class="pricing-header">
-                            <h3>Premium</h3>
+                            <h3>Startup</h3>
                             <div class="price">
                                 <span class="currency">$</span>
                                 <span class="amount">99</span>
@@ -307,6 +309,21 @@
             freeButton.onclick = function() {
                 window.location.href = './confirmation/?trial=1';
             };
+        }
+        
+        // YouTube video loader
+        function loadYouTubeVideo() {
+            const container = document.getElementById('video-placeholder');
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/0eGVZLuJ20w?rel=0&autoplay=1';
+            iframe.title = 'Why Your Best Bugs Never Get Reported';
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            
+            // Clear the placeholder content and add the iframe
+            container.innerHTML = '';
+            container.appendChild(iframe);
         }
     </script>
 </body>
