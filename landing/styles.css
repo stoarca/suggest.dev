@@ -186,6 +186,8 @@ h2 {
     color: rgb(255, 255, 255);
     border-radius: 2px;
     box-shadow: rgba(87, 85, 85, 0.33) 0px 3px 3px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
 }
 
 .btn-primary:hover {
@@ -849,11 +851,6 @@ h2 {
 
 
 
-/* Pricing buttons use default .btn styles */
-.pricing-comparison-table .btn {
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-}
 
 .trial-link {
     margin-top: 5px;
