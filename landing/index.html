@@ -237,7 +237,7 @@
     </footer>
     
     <script>
-        // Restart videos when they come into view
+        // Control video playback based on visibility
         const videos = document.querySelectorAll('video');
         
         const observerOptions = {
@@ -248,15 +248,21 @@
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
+                const video = entry.target;
                 if (entry.isIntersecting) {
-                    const video = entry.target;
-                    video.currentTime = 0; // Reset to beginning
+                    // Restart video from beginning when it comes into view
+                    video.currentTime = 0;
                     video.play();
+                } else {
+                    // Pause video when it goes out of view
+                    video.pause();
                 }
             });
         }, observerOptions);
         
         videos.forEach(video => {
+            // Ensure videos don't autoplay on page load
+            video.pause();
             observer.observe(video);
         });
         
