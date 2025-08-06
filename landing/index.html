@@ -66,8 +66,8 @@
             <div class="container">
                 <div class="builders-layout">
                     <div>
-                        <h2>Rewind time to watch the video</h2>
-                        <p class="subtitle">Open your feedback inbox and click play.<br>See exactly what the user saw, with full context.</p>
+                        <h2>Rewind time to watch the recording</h2>
+                        <p class="subtitle">Each feedback includes complete diagnostic data.<br/>See error traces, DOM state, and even a video of exactly what the user saw.</p>
                     </div>
                     <div class="tablet-frame">
                         <div class="laptop-screen">
@@ -86,16 +86,16 @@
         <section class="section section-grey">
             <div class="container">
                 <h2>QA without the QA team</h2>
-                <p class="subtitle">Your sales, marketing, and support staff encounter bugs in your product.<br/>Make it easy for them to improve your software.</p>
+                <p class="subtitle">Your sales, marketing, and support staff already encounter bugs in your product.<br/>Make it easy for them to improve your software.</p>
                 <div class="video-container" id="video-placeholder">
-                    <div class="video-placeholder-content">
-                        <button class="video-play-button" onclick="loadYouTubeVideo()">
+                    <div class="video-placeholder-content" onclick="loadYouTubeVideo()">
+                        <div class="video-play-button">
                             <svg class="play-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="40" cy="40" r="40" fill="rgb(0, 103, 251)"/>
                                 <path d="M32 25 L32 55 L52 40 Z" fill="white"/>
                             </svg>
                             <span class="play-text">Watch full demo (3 minutes)</span>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,8 +103,8 @@
         
         <section class="section section-white">
             <div class="container">
-                <h2>Enable users to give feedback as well</h2>
-                <p class="subtitle">Some of your website users naturally rageclick when frustrated.<br/>Let them contribute too. (Optional)</p>
+                <h2>Go beyond just your team</h2>
+                <p class="subtitle">Your team's not going to catch all the problems.<br/>Let external users contribute too. (Optional)</p>
                 <div class="hero-image">
                     <video src="herodemo/hero.mp4" autoplay loop muted playsinline disablePictureInPicture>
                         Your browser does not support the video tag.
@@ -115,70 +115,18 @@
         
         <section class="section section-grey">
             <div class="container">
-                <h2>Other goodies</h2>
-                <div class="goodies-grid">
-                    <div class="goodie-item">
-                        <img src="installation.svg" alt="30-second installation icon" class="goodie-icon">
-                        <h3>30-second installation</h3>
-                        <div class="tooltip">Add to your site by copy pasting a short snippet</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="api.svg" alt="Full API control icon" class="goodie-icon">
-                        <h3>Full API control</h3>
-                        <div class="tooltip">Programmatically manage feedback and integrate with your workflow</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="error.svg" alt="Error stack traces icon" class="goodie-icon">
-                        <h3>Error stack traces</h3>
-                        <div class="tooltip">Automatically capture JavaScript errors with full stack traces</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="browser.svg" alt="Browser info icon" class="goodie-icon">
-                        <h3>Browser info</h3>
-                        <div class="tooltip">Automatically captures browser, OS, and device details</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="team.svg" alt="Team collaboration icon" class="goodie-icon">
-                        <h3>Team collaboration</h3>
-                        <div class="tooltip">Share feedback with your team and assign to the right people</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="respond.svg" alt="Respond to customers icon" class="goodie-icon">
-                        <h3>Respond to customers</h3>
-                        <div class="tooltip">Reply directly to users who submitted feedback</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="notes.svg" alt="Internal notes icon" class="goodie-icon">
-                        <h3>Internal notes</h3>
-                        <div class="tooltip">Private team comments on feedback items</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="notifications.svg" alt="Notifications icon" class="goodie-icon">
-                        <h3>Notifications</h3>
-                        <div class="tooltip">Get instant alerts when new feedback arrives</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="app.svg" alt="Mobile app icon" class="goodie-icon">
-                        <h3>Mobile app</h3>
-                        <div class="tooltip">Review and respond to feedback on the go</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="integration.svg" alt="Integrations icon" class="goodie-icon">
-                        <h3>Integrations</h3>
-                        <div class="tooltip">Easily connect with Zapier, Slack, and more</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="privacy.svg" alt="Privacy controls icon" class="goodie-icon">
-                        <h3>Privacy controls</h3>
-                        <div class="tooltip">Full data control and anonymization options</div>
-                    </div>
-                    <div class="goodie-item">
-                        <img src="metadata.svg" alt="Custom metadata icon" class="goodie-icon">
-                        <h3>Custom metadata</h3>
-                        <div class="tooltip">Add your own custom fields and events to capture context-specific information</div>
-                    </div>
+                <h2>30-second installation</h2>
+                <p class="subtitle">Just <a href="#pricing" onclick="event.preventDefault(); document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })">sign up</a> and paste this snippet on your site:</p>
+                <div class="code-snippet">
+                    <pre><code>&lt;script src="https://www.momentcrm.com/embed"&gt;&lt;/script&gt;
+&lt;script&gt;
+  MomentCRM('init', {
+    'teamId': 'YOUR_TEAM_ID',
+    'doTimeTravel': true,
+    'quadClickForFeedback': true,
+  });
+&lt;/script&gt;</code></pre>
                 </div>
-                <p class="goodies-more">...and loads more features from the <a href="https://www.momentcrm.com" target="_blank">Moment</a> platform.</p>
             </div>
         </section>
         
@@ -186,44 +134,69 @@
             <div class="container">
                 <h2>Pricing</h2>
                 <p class="pricing-intro">Developers are expensive.<br>Stop making them chase down poorly written bug reports.</p>
-                <div class="pricing-table">
-                    <div class="pricing-column">
-                        <div class="pricing-header">
-                            <h3>Free</h3>
-                            <div class="price">
-                                <span class="currency">$</span>
-                                <span class="amount">0</span>
-                                <span class="period">/month</span>
-                            </div>
+                <div class="pricing-comparison-table">
+                    <div class="mobile-pricing-header">
+                        <div class="mobile-plan">
+                            <h4>Free</h4>
+                            <div class="mobile-price">$0</div>
                         </div>
-                        <ul class="pricing-features">
-                            <li>Up to 2 team members</li>
-                            <li>20k sessions with 5-day retention</li>
-                            <li>10 sessions saved forever</li>
-                        </ul>
-                        <div class="pricing-cta">
-                            <button class="btn btn-primary" id="free-button">Create free account</button>
-                            <p class="trial-link">easily upgrade later</p>
+                        <div class="mobile-plan">
+                            <h4>Startup</h4>
+                            <div class="mobile-price">$25<span>/mo</span></div>
+                        </div>
+                        <div class="mobile-plan">
+                            <h4>Team</h4>
+                            <div class="mobile-price">$99<span>/mo</span></div>
                         </div>
                     </div>
-                    <div class="pricing-column">
-                        <div class="pricing-header">
-                            <h3>Startup</h3>
-                            <div class="price">
-                                <span class="currency">$</span>
-                                <span class="amount">99</span>
-                                <span class="period">/month</span>
-                            </div>
-                        </div>
-                        <ul class="pricing-features">
-                            <li>Up to 10 team members</li>
-                            <li>20k sessions with 1-month retention</li>
-                            <li>1000 sessions saved forever</li>
-                        </ul>
-                        <div class="pricing-cta">
-                            <button class="btn btn-primary" id="payment-button">Subscribe now</button>
-                        </div>
-                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <div class="plan-header">
+                                        <h3>Free</h3>
+                                        <div class="price">$0</div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="plan-header">
+                                        <h3>Startup</h3>
+                                        <div class="price">$25<span>/mo</span></div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="plan-header">
+                                        <h3>Team</h3>
+                                        <div class="price">$99<span>/mo</span></div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-label">Team members</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Feedback sessions saved forever</td>
+                                <td>30</td>
+                                <td>300</td>
+                                <td>2000</td>
+                            </tr>
+                            <tr class="cta-row">
+                                <td></td>
+                                <td>
+                                    <button class="btn btn-primary" id="free-button">Start for free</button>
+                                    <p class="trial-link">Easily upgrade later</p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <p class="pricing-guarantee">
                 Need higher limits? <a href="#" onclick="event.preventDefault(); MomentCRM('open')">Contact sales</a><br/>
@@ -292,20 +265,13 @@
         const urlParams = new URLSearchParams(window.location.search);
         const isTest = urlParams.get('test') === '1';
         
-        const paymentButton = document.getElementById('payment-button');
         const freeButton = document.getElementById('free-button');
         
         if (isTest) {
-            paymentButton.onclick = function() {
-                window.location.href = 'https://buy.stripe.com/test_28EbIUf0H95D1V73Km7ss00';
-            };
             freeButton.onclick = function() {
                 window.location.href = './confirmation/?trial=1&test=1';
             };
         } else {
-            paymentButton.onclick = function() {
-                window.location.href = 'https://buy.stripe.com/28EbIUf0H95D1V73Km7ss00';
-            };
             freeButton.onclick = function() {
                 window.location.href = './confirmation/?trial=1';
             };
@@ -315,7 +281,7 @@
         function loadYouTubeVideo() {
             const container = document.getElementById('video-placeholder');
             const iframe = document.createElement('iframe');
-            iframe.src = 'https://www.youtube.com/embed/0eGVZLuJ20w?rel=0&autoplay=1';
+            iframe.src = 'https://www.youtube.com/embed/0eGVZLuJ20w?rel=0&autoplay=1&modestbranding=1&showinfo=0&fs=1&controls=1';
             iframe.title = 'Why Your Best Bugs Never Get Reported';
             iframe.frameBorder = '0';
             iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
