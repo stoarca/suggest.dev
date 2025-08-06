@@ -157,6 +157,7 @@ h2 {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .hero-image {
@@ -310,6 +311,10 @@ h2 {
         font-size: 1rem;
     }
     
+    .instructions-layout .subtitle {
+        margin-bottom: 2rem;
+    }
+    
     .cta-buttons {
         flex-direction: column;
         width: 100%;
@@ -323,7 +328,7 @@ h2 {
     
     .instructions-layout {
         flex-direction: column;
-        gap: 0;
+        gap: 3rem;
     }
     
     
